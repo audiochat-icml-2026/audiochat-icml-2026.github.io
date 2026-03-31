@@ -456,6 +456,26 @@
       display: block;
     }
 
+    .tldr-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    
+    .tldr-links a {
+      font-size: 0.8rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .tldr-links a:hover {
+      text-decoration: underline;
+    }
+
     @media screen and (max-width: 1024px) {
       .tldr-grid {
         grid-template-columns: 1fr;
@@ -537,6 +557,10 @@
             <audio controls preload="metadata">
               <source src="samples/1320-122617-0021-storygeneval-change-change/audiochat.wav" type="audio/wav">
             </audio>
+          </div>
+          <div class="tldr-links">
+            <a href="#multi-turn-editing">→ Multi-Turn Editing</a>
+            <a href="#real-world-editing">→ Real-World Editing on AudioCaps</a>
           </div>
         </div>
       </div>
@@ -1365,7 +1389,8 @@
     </div>
 
     <div class="section-header">
-      <h3 class="title is-4">Multi-Turn Editing</h3>
+      <h3 class="title is-4" id="multi-turn-editing">Multi-Turn Editing</h3>
+      <p>First instruction output is at top. It is added as input for instruction 2.</p>
     </div>
 
     <!-- Sample: 4077-13751-0019-storygeneval-sfx-add-add -->
@@ -1375,161 +1400,202 @@
           <tr>
             <th>Instructions</th>
             <th>Source</th>
-            <th>Output 1</th>
-            <th>Output 2</th>
+            <th>Outputs</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Add footsteps -> Add a door closing </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Add footsteps → Add a door closing</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Remove the water pouring sound -> Increase loudness of the organ music to -25  </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Remove the water pouring sound → Increase loudness of the organ music to -25</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Move the giggle further to the right -> Move the footsteps to the left</span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Move the giggle further to the right → Move the footsteps to the left</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Remove the whispers -> Remove the dripping water </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Remove the whispers → Remove the dripping water</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Remove the footsteps -> Remove the carriage sound </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Remove the footsteps → Remove the carriage sound</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Make the choir humming quieter -> Make the chime ring louder  </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Make the choir humming quieter → Make the chime ring louder</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <td data-label="Instruction">
-              <span class="instruction-text">Add the sound of wind blowing through reeds -> Add the sound of a lone crow cawing   </span>
+            <td data-label="Instructions">
+              <span class="instruction-text">Add the sound of wind blowing through reeds → Add the sound of a lone crow cawing</span>
             </td>
             <td data-label="Source">
               <audio controls preload="metadata">
                 <source src="multi_turn/source/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
               </audio>
             </td>
-            <td data-label="Output 1">
-              <audio controls preload="metadata">
-                <source src="multi_turn/inputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td data-label="Output 2">
-              <audio controls preload="metadata">
-                <source src="multi_turn/outputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
-              </audio>
+            <td data-label="Outputs">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 1</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/inputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
+                  </audio>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">Output 2</div>
+                  <audio controls preload="metadata">
+                    <source src="multi_turn/outputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
+                  </audio>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -1537,7 +1603,7 @@
     </div>
 
     <div class="section-header">
-      <h3 class="title is-4">Real World Editing on AudioCaps</h3>
+      <h3 class="title is-4" id="real-world-editing">Real World Editing on AudioCaps</h3>
       <p>Note that some instructions mis-caption the element to be edited. However, the model can still understand what it refers to.</p>
     </div>
 
