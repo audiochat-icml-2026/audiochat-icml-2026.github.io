@@ -1365,6 +1365,178 @@
     </div>
 
     <div class="section-header">
+      <h3 class="title is-4">Multi-Turn Editing</h3>
+    </div>
+
+    <!-- Sample: 4077-13751-0019-storygeneval-sfx-add-add -->
+    <div class="sample-container">
+      <table class="sample-table editing-table">
+        <thead>
+          <tr>
+            <th>Instructions</th>
+            <th>Source</th>
+            <th>Output 1</th>
+            <th>Output 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Add footsteps -> Add a door closing </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/7176-92135-0018-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Remove the water pouring sound -> Increase loudness of the organ music to -25  </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/1089-134686-0021-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Move the giggle further to the right -> Move the footsteps to the left</span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/1221-135767-0019-storygeneval-sfx-move_move.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Remove the whispers -> Remove the dripping water </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/1284-1181-0021-storygeneval-sfx-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Remove the footsteps -> Remove the carriage sound </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/121-127105-0027-storygeneval-remove_remove.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Make the choir humming quieter -> Make the chime ring louder  </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/1089-134686-0021-storygeneval-sfx-volume_volume.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td data-label="Instruction">
+              <span class="instruction-text">Add the sound of wind blowing through reeds -> Add the sound of a lone crow cawing   </span>
+            </td>
+            <td data-label="Source">
+              <audio controls preload="metadata">
+                <source src="multi_turn/source/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 1">
+              <audio controls preload="metadata">
+                source src="multi_turn/inputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td data-label="Output 2">
+              <audio controls preload="metadata">
+                source src="multi_turn/outputs/1995-1837-0013-storygeneval-add_add.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">
       <h3 class="title is-4">Real World Editing on AudioCaps</h3>
       <p>Note that some instructions mis-caption the element to be edited. However, the model can still understand what it refers to.</p>
     </div>
